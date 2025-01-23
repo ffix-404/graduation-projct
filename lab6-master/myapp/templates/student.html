@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cornflowerblue;">
+    <h1>STUDENT INFO</h1>
+    <form action="{%url 'add student'%}" method="post">
+        {%csrf_token%}
+        {{forms}}
+    <input type="submit" value="ADD STUDENT">
+    <h2>Student list</h2>
+    <ul>
+        {%for x in students%}
+        <li><a href="{% url 'detail' x.id%}"> student id {{x.id}}</a> /first name {{x.fname}} , last name {{x.lname}} , ID NUMBER {{x.idNumber}} , email {{x.email}} </li>
+    </ul>
+         {%endfor%}
+    </form>
+    <a href="{% url 'courses page'%}">courses list</a>
+    
+
+</body>
+</html>

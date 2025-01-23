@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cadetblue;">
+    <h2>Student first name ({{info.fname}}) , last name ({{info.lname}}) ID ({{info.id}})</h2>
+    <ul>
+     <li>ID number {{info.idNumber}}</li>
+     <li>email {{info.email}}</li>
+     
+     
+     <div>
+        <h3>Register courses</h3>
+        {%for x in corses%}
+        <li>{{x}}</li>
+        {%endfor%}
+     </div>
+
+     <div>
+        <h3>UNregister corses</h3>
+        <form action="{% url 'add course' info.id%}" method="post">
+            {%csrf_token%}
+            <select name="courses" id="">
+                {%for y in  none_courses%}
+             <option value="{{y.id}}"> {{ y }}</option>
+             {%endfor%}
+             </select>
+             <input type="submit" value="Add course">
+        </form>
+     </div>
+    </ul>
+    <a href="{%url 'student page'%}"> student page</a>
+</body>
+</html>
