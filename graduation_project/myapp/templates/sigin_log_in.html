@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
 
-   
+
 </head>
+
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
@@ -52,24 +54,26 @@
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
+                    <h1>Hello Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer>
-        
-    </footer>
-    <script src="{%static 'transission.js'%}"></script>
-    {% if messages %}
+        {% if messages %}
         <div class="messages">
             {% for message in messages %}
-                <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
-            {% endfor %}
+            <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
         </div>
-    {% endif %}
+        {% endfor %}
+        </div>
+        {% endif %}
+    </footer>
+    <script src="{%static 'transission.js'%}"></script>
+
 </body>
+
 </html>

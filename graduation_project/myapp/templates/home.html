@@ -3,10 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eida | عدة - Saudi Construction Equipment</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    
+    <!-- Header -->
+    <header>
+        <a href="/" class="logo">Eida | عدة</a>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/signin_login">Sign in</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Saudi Arabia's Mega Projects</h1>
+        <p>Supporting Vision 2030 through seamless equipment rental solutions. From NEOM to the Red Sea
+            Project, we're making it easier to access the machinery that builds tomorrow.</p>
+        <div class="cta-buttons">
+            <button class="btn primary">Rent Equipment <span class="arrow">→</span></button>
+            <button class="btn secondary">List Your Equipment</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Transforming Equipment Rental</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Instant Booking</h3>
+                <p>Book construction equipment in minutes, not days. Available by hour, day, or month.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Secure Payments</h3>
+                <p>Safe and secure payment processing with flexible rental terms and transparent pricing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>On-Site Delivery</h3>
+                <p>Direct delivery to your construction site, from NEOM to Qiddiya and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>Supporting Saudi Arabia's Vision 2030</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                {% load static %}
+                <img src="{% static 'myapp/images/neom_construction.jpg' %}" alt="NEOM Construction">
+                <div class="project-content">
+                    <h3>NEOM</h3>
+                    <p>Supporting the construction of the world's most ambitious project with advanced equipment solutions.</p>
+                    <a href="#" class="link">Available Equipment →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'myapp/images/Tools-16.jpg' %}" alt="Red Sea Project Construction">
+                <div class="project-content">
+                    <h3>RED SEA PROJECT</h3>
+                    <p>Providing sustainable construction equipment for this luxury tourism destination.</p>
+                    <a href="#" class="link">Available Equipment →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'myapp/images/download (3).jpg' %}" alt="Qiddiya Construction">
+                <div class="project-content">
+                    <h3>QIDDIYA</h3>
+                    <p>Enabling the development of Saudi Arabia's premier entertainment destination.</p>
+                    <a href="#" class="link">Available Equipment →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'script2.js' %}"></script>
 </body>
 </html>
